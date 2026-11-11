@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>for Yara 💌</title>
+<style>
+body{margin:0;background:#ffeef5;font-family:Arial;text-align:center;color:#7a2e4a}
+.page{max-width:420px;margin:auto;min-height:100vh;padding:30px 20px;box-sizing:border-box}
+h1{font-family:Georgia;font-style:italic;font-weight:400;font-size:38px}
+.envelope{width:100%;max-width:360px;margin:auto;background:#f48fb1;border-radius:18px;padding:45px 0}
+.seal{width:70px;height:70px;background:#e8a0a8;border-radius:50%;margin:auto;display:flex;align-items:center;justify-content:center;font-size:35px}
+input{width:85%;padding:15px;border:none;border-radius:30px;margin-top:25px;text-align:center;font-size:16px}
+button{margin-top:15px;background:#c94f6d;color:#fff;border:none;padding:13px 35px;border-radius:30px;font-size:16px}
+#letter{display:none;background:#fff5f8;border-radius:20px;padding:25px;text-align:right;line-height:1.9}
+img{width:100%;border-radius:15px;margin-top:15px}
+</style>
+</head>
+<body>
+<div class="page" id="lockPage">
+<h1>for Yara</h1>
+<p>كل اللي بينا هنا</p>
+<div class="envelope"><div class="seal">💌</div></div>
+<input id="pass" placeholder="اكتبي الباسورد يا يارا">
+<br><button onclick="openLetter()">افتحي الجواب 💖</button>
+<p id="err" style="color:red"></p>
+</div>
+<div class="page" id="letter">
+<h1 style="text-align:center">my fav person ❤️</h1>
+<p>يا يارا، انتي مش مجرد صحبتي، انتي روحي وكل حاجة حلوة في حياتي. بحبك بجد، وبتمنى نفضل دايماً سوا ❤️</p>
+<img src="yara1.jpg">
+<img src="yara2.jpg">
+<img src="yara3.jpg">
+<p style="text-align:center">❤️ بحبك دايماً يا يارا</p>
+</div>
+<script>
+function openLetter(){
+let correct = "yara";
+let val = document.getElementById("pass").value.trim().toLowerCase();
+if(val === correct){document.getElementById("lockPage").style.display="none";document.getElementById("letter").style.display="block";}
+else{document.getElementById("err").innerText="الباسورد غلط يا قلبي، حاولي تاني 🥺";}
+}
+</script>
+</body>
+</html>
